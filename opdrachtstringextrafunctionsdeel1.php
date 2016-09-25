@@ -1,3 +1,8 @@
+ <?php
+       $fruit="kokosnoot";
+       $lengte_van_fruit=strlen($fruit);
+       $positie_eerste_o=strpos($fruit,"o");
+       ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,16 +10,9 @@
     <title>Opdracht string extra functions</title>
 </head>
 <body>
-   <script>
-        <?php
-       $fruit="kokosnoot";
-       $lengte_van_fruit=strlen($fruit);
-       $positie_eerste_o=strpos($fruit,"o");
-       ?>
-   </script>
    <h1>Deel 1</h1>
    <p>Lengte van fruit <?=$lengte_van_fruit ?></p>
-   <p>Positie eerste o in fruit <?=$positie_eertse_o ?></p>
+   <p>Positie eerste o in fruit <?=$positie_eerste_o ?></p>
     
 </body>
 </html>
