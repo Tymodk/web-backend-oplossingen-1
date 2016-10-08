@@ -13,7 +13,6 @@
 	}
 	var_dump($evennumbers);
 	var_dump($numbers);
-	#hoe printen?
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +22,5 @@
 </head>
 <body>
 	<p>Alle elementen uit array vermenigvuldigd <?=$vermenigvuldigd ?></p>
-	<p>Alle oneven getallen <?=$even ?></p>
-	<p>Elementen met dezelfde index opgeteld <?=$nummers ?></p>
 </body>
 </html>

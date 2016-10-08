@@ -2,8 +2,7 @@
       $lettertje="e";
       $cijfertje=3;
       $langstewoord="zandzeepsodemineralenwatersteenstralen";
-      $nieuwlangstewoord=str_replace($lettertje, $cijfertje, $langstewoord)
-             
+      $nieuwlangstewoord=str_replace($lettertje, $cijfertje, $langstewoord)       
     ?>
 <!DOCTYPE html>
 <html lang="en">
