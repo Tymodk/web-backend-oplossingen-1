@@ -1,7 +1,6 @@
 <?php
 $pigHealth=5;
 $maxThrows=8;
-$aantalKeer=2;
 launchAngryBird();
 function calculateHit()
 {
@@ -36,16 +35,16 @@ function launchAngryBird()
 {
 	global $pigHealth;
 	global $maxThrows;
-	global $aantalKeer;
+	static $aantalKeer;
 	if ($aantalKeer<$maxThrows && $pigHealth>0) {
-		$aantalKeer+=1;
+		$aantalKeer++;
 		launchAngryBird();
 		calculateHit();
 	}
-	if ($pigHealth==0 && $aantalKeer<=$maxThrows) {
+	if ($pigHealth===0 && $aantalKeer<=$maxThrows) {
 		echo "Gewonnen!<br>";
 	}
-	if ($pigHealth>0 && $aantalKeer==$maxThrows) {
+	if ($pigHealth>0 && $aantalKeer===$maxThrows) {
 		echo "Verloren <br>";
 	}
 	echo $aantalKeer;
