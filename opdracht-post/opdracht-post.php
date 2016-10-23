@@ -2,7 +2,7 @@
 $password="ditiseentest";
 $user="alessandro";
 $correct=false;
-$message="";
+$message="Inloggen";
 if (isset($_POST["submit"])) 
 {
  if ($_POST["user"]==$user && $_POST["pw"]==$password )

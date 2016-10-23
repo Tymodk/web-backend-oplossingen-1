@@ -22,7 +22,7 @@ var_dump($tafels)
 		<?php for($z=0; $z <= $maxRijen; $z++): ?>
 			<tr>
 				<?php for ($x=0; $x <=$maxKolommen; $x++): ?> 
-				<td> <?= $products[$x] ?></td>
+				<td> <?= $tafels[$z][$x] ?></td>
 				<?php endfor ?>
 			</tr>
 		<?php  endfor?> 

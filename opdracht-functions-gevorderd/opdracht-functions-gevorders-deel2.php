@@ -41,10 +41,10 @@ function launchAngryBird()
 		calculateHit();
 		launchAngryBird();
 	}
-	if ($pigHealth===0 && $aantalKeer<=$maxThrows) {
+	else if ($pigHealth===0 && $aantalKeer<=$maxThrows) {
 		echo "Gewonnen!<br>";
 	}
-	if ($pigHealth>0 && $aantalKeer>=$maxThrows) {
+	else if ($pigHealth>0 && $aantalKeer>=$maxThrows) {
 		echo "Verloren <br>";
 	}
 }
