@@ -20,6 +20,7 @@ if (isset($_GET["destroy"]))
 <head>
 	<meta charset="UTF-8">
 	<title>Overzicht</title>
+	<link rel="stylesheet" type="text/css" href="styling.css">
 </head>
 <body>
 <a href="session-overzichtpagina.php?destroy=true">Destroy Session</a>
