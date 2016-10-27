@@ -20,19 +20,19 @@ if(isset($_GET["wijzig"]))
 {
 	if ($_GET["wijzig"]=="straat") 
 	{
-		$autofocus_straat=true;
+		$autofocus_straat="active_field";
 	}
 	if ($_GET["wijzig"]=="nummer") 
 	{
-		$autofocus_nummer=true;
+		$autofocus_nummer="active_field";
 	}
 	if ($_GET["wijzig"]=="gemeente") 
 	{
-		$autofocus_gemeente=true;
+		$autofocus_gemeente="active_field";
 	}
 	if ($_GET["wijzig"]=="postcode") 
 	{
-		$autofocus_postcode=true;
+		$autofocus_postcode="active_field";
 	}
 }
  ?>
@@ -51,13 +51,13 @@ if(isset($_GET["wijzig"]))
 	<h1>Adresgegevens</h1>
 	<form action="session-overzichtpagina.php" method="post">
 		<label for="straat">Straat</label><br>
-        <input class="<?php if($autofocus_straat){echo "active_field";}?>" type="text" name="straat" value="<?php if (isset($_SESSION["straat"])) { echo $_SESSION["straat"]; }?>"><br>
+        <input class="<?=$autofocus_straat ?>" type="text" name="straat" value="<?php if (isset($_SESSION["straat"])) { echo $_SESSION["straat"]; }?>"><br>
         <label for="nummer">Nummer</label><br>
-        <input  class="<?php if($autofocus_nummer){echo "active_field";}?>" type="text" name="nummer" value="<?php if (isset($_SESSION["nummer"])) { echo $_SESSION["nummer"]; } ?>"><br>
+        <input  class="<?=$autofocus_nummer ?>" type="text" name="nummer" value="<?php if (isset($_SESSION["nummer"])) { echo $_SESSION["nummer"]; } ?>"><br>
         <label for="gemeente">Gemeente</label><br>
-        <input class="<?php if($autofocus_gemeente){echo "active_field";}?>" type="text" name="gemeente" value="<?php if (isset($_SESSION["gemeente"])) { echo $_SESSION["gemeente"]; } ?>"><br>
+        <input class="<?=$autofocus_gemeente ?>" type="text" name="gemeente" value="<?php if (isset($_SESSION["gemeente"])) { echo $_SESSION["gemeente"]; } ?>"><br>
         <label for="postcode">Postcode</label><br>
-        <input  class="<?php if($autofocus_postcode){echo "active_field";}?>" type="text" name="postcode" value="<?php if (isset($_SESSION["postcode"])) { echo $_SESSION["postcode"]; } ?>"><br>
+        <input  class="<?=$autofocus_postcode ?>" type="text" name="postcode" value="<?php if (isset($_SESSION["postcode"])) { echo $_SESSION["postcode"]; } ?>"><br>
         <button type="submit" name="submit">Volgende</button>
 	</form>
 </body>

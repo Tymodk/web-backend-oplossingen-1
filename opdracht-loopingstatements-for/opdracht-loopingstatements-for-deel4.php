@@ -9,13 +9,13 @@ for ($rijenCounter=0; $rijenCounter <=$maxRijen ; $rijenCounter++) {
 	}
 	$tafels[$rijenCounter]=$products;
 }
-var_dump($tafels)
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>for 4</title>
+	<link rel="stylesheet" type="text/css" href="stylingdeel2.css">
 </head>
 <body>
 		<table>
@@ -25,11 +25,14 @@ var_dump($tafels)
 				<?php for ($kolommenCounter=0;$kolommenCounter<=$maxKolommen;$kolommenCounter++): ?>
 					<th><?= $kolommenCounter ?></th>	
 				<?php endfor ?>
-	</thead
+	</thead>
 		<?php for($z=0; $z <= $maxRijen; $z++): ?>
-			</tr>
+			<tr>
+			<th><?=$z ?></th>
 				<?php for ($x=0; $x <=$maxKolommen; $x++): ?> 
-				<td> <?= $products[$x]?></td>
+				<td <?php if ($tafels[$z][$x]%2!=0):?> class="active"<?php endif ?>>
+				<?=$tafels[$z][$x]?>
+				</td>
 				<?php endfor ?>
 			</tr>
 		<?php  endfor?> <!-- Vind error niet! -->

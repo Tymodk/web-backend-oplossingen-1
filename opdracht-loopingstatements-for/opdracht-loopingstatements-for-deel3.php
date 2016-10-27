@@ -9,23 +9,25 @@ for ($rijenCounter=0; $rijenCounter <=$maxRijen ; $rijenCounter++) {
 	}
 	$tafels[$rijenCounter]=$products;
 }
-var_dump($tafels)
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>for 3</title>
+	<link rel="stylesheet" type="text/css" href="stylingdeel2.css">
 </head>
 <body>
 		<table>
 		<?php for($z=0; $z <= $maxRijen; $z++): ?>
 			<tr>
 				<?php for ($x=0; $x <=$maxKolommen; $x++): ?> 
-				<td> <?= $tafels[$z][$x] ?></td>
+				<td <?php if ($tafels[$z][$x]%2!=0):?> class="active"<?php endif ?>>
+				<?=$tafels[$z][$x]?>
+				</td>
 				<?php endfor ?>
 			</tr>
-		<?php  endfor?> 
+		<?php endfor?> 
 	</table>
 </body>
 </html>

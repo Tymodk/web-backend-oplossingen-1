@@ -1,0 +1,11 @@
+<body>
+	<h1>Nieuws</h1>
+	<p>Hier vind je wat interressante artikels over PHP.</p>
+		<?php foreach ($artikels as $id => $artikel): ?>
+			<aside>
+			<h2><?= $artikel[ 'titel' ] ?></h2>
+			<p><?= $artikel[ 'text' ] ?></p>
+			<p><?= $artikel[ 'tags' ] ?></p>
+			</aside>
+		<?php endforeach ?>
+</body>

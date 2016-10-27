@@ -1,16 +1,16 @@
 <?php 
 session_start();
-$autofocus_email=false;
-$autofocus_nickname=false;
+$autofocus_email="";
+$autofocus_nickname="";
 if(isset($_GET["wijzig"]))
 {
 	if ($_GET["wijzig"]=="email") 
 	{
-		$autofocus_email=true;
+		$autofocus_email="active_field";
 	}
 	if ($_GET["wijzig"]=="nickname") 
 	{
-		$autofocus_nickname=true;
+		$autofocus_nickname="active_field";
 	}
 }
  ?>
@@ -24,9 +24,9 @@ if(isset($_GET["wijzig"]))
 <body>
 	<form action="sessions-adrespagina.php" method="post">
 		<label for="email">E-mail</label><br>
-        <input class="<?php if($autofocus_email){echo "active_field";}?>" type="text" name="email" value="<?php if (isset($_SESSION["email"])) { echo $_SESSION["email"]; } ?>"><br>
+        <input class="<?=$autofocus_email ?>" type="text" name="email" value="<?php if (isset($_SESSION["email"])) { echo $_SESSION["email"]; } ?>"><br>
         <label for="nickname">Nickname</label><br>
-        <input  class="<?php if($autofocus_nickname){echo "active_field";}?>" type="text" name="nickname" value="<?php if (isset($_SESSION["nickname"])) { echo $_SESSION["nickname"]; } ?>"><br>
+        <input  class="<?=$autofocus_nickname ?>" type="text" name="nickname" value="<?php if (isset($_SESSION["nickname"])) { echo $_SESSION["nickname"]; } ?>"><br>
         <button type="submit" name="submit">Volgende</button>
 	</form>
 </body>
