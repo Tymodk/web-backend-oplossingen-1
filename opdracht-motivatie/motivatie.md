@@ -1,0 +1,1 @@
+Mijn motivatie voor dit vak? Het backend gedeelte. Styling is niks voor mij. Maar laat mij wat variabelen declareren en programmeren en ik ben zeer gelukkig. ;)
